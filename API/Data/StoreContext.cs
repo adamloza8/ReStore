@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using API.Enities;
+using API.Entities;
 
 namespace API.Data
 {
@@ -11,5 +12,6 @@ namespace API.Data
         }
 
        public DbSet<Product> Products {get; set;}
+       public DbSet<Basket> Baskets { get; set; }
     }
 }
