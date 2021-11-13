@@ -8,16 +8,16 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20211023164602_InitialCreate")]
+    [Migration("20210922035646_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.11");
+                .HasAnnotation("ProductVersion", "5.0.8");
 
-            modelBuilder.Entity("API.Enities.Product", b =>
+            modelBuilder.Entity("API.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,6 +36,9 @@ namespace API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<long>("Price")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("QuantityInStock")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Type")

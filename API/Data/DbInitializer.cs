@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using API.Enities;
+using API.Entities;
 
 namespace API.Data
 {
     public static class DbInitializer
     {
-        public static void Initialize(StoreContext context) 
+        public static void Initialize(StoreContext context)
         {
-              if (context.Products.Any()) return;
+            if (context.Products.Any()) return;
 
             var products = new List<Product>
             {
@@ -21,6 +22,7 @@ namespace API.Data
                     PictureUrl = "/images/products/sb-ang1.png",
                     Brand = "Angular",
                     Type = "Boards",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -30,6 +32,7 @@ namespace API.Data
                     PictureUrl = "/images/products/sb-ang2.png",
                     Brand = "Angular",
                     Type = "Boards",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -39,7 +42,8 @@ namespace API.Data
                     Price = 18000,
                     PictureUrl = "/images/products/sb-core1.png",
                     Brand = "NetCore",
-                    Type = "Boards"
+                    Type = "Boards",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -49,7 +53,8 @@ namespace API.Data
                     Price = 30000,
                     PictureUrl = "/images/products/sb-core2.png",
                     Brand = "NetCore",
-                    Type = "Boards"
+                    Type = "Boards",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -60,6 +65,7 @@ namespace API.Data
                     PictureUrl = "/images/products/sb-react1.png",
                     Brand = "React",
                     Type = "Boards",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -70,6 +76,7 @@ namespace API.Data
                     PictureUrl = "/images/products/sb-ts1.png",
                     Brand = "TypeScript",
                     Type = "Boards",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -80,6 +87,7 @@ namespace API.Data
                     PictureUrl = "/images/products/hat-core1.png",
                     Brand = "NetCore",
                     Type = "Hats",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -90,6 +98,7 @@ namespace API.Data
                     PictureUrl = "/images/products/hat-react1.png",
                     Brand = "React",
                     Type = "Hats",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -100,6 +109,7 @@ namespace API.Data
                     PictureUrl = "/images/products/hat-react2.png",
                     Brand = "React",
                     Type = "Hats",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -110,6 +120,7 @@ namespace API.Data
                     PictureUrl = "/images/products/glove-code1.png",
                     Brand = "VS Code",
                     Type = "Gloves",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -120,7 +131,7 @@ namespace API.Data
                     PictureUrl = "/images/products/glove-code2.png",
                     Brand = "VS Code",
                     Type = "Gloves",
-                    
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -131,6 +142,7 @@ namespace API.Data
                     PictureUrl = "/images/products/glove-react1.png",
                     Brand = "React",
                     Type = "Gloves",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -141,6 +153,7 @@ namespace API.Data
                     PictureUrl = "/images/products/glove-react2.png",
                     Brand = "React",
                     Type = "Gloves",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -151,6 +164,7 @@ namespace API.Data
                     PictureUrl = "/images/products/boot-redis1.png",
                     Brand = "Redis",
                     Type = "Boots",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -161,6 +175,7 @@ namespace API.Data
                     PictureUrl = "/images/products/boot-core2.png",
                     Brand = "NetCore",
                     Type = "Boots",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -171,6 +186,7 @@ namespace API.Data
                     PictureUrl = "/images/products/boot-core1.png",
                     Brand = "NetCore",
                     Type = "Boots",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -180,6 +196,7 @@ namespace API.Data
                     PictureUrl = "/images/products/boot-ang2.png",
                     Brand = "Angular",
                     Type = "Boots",
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -190,6 +207,7 @@ namespace API.Data
                     PictureUrl = "/images/products/boot-ang1.png",
                     Brand = "Angular",
                     Type = "Boots",
+                    QuantityInStock = 100
                 },
             };
 
@@ -201,4 +219,4 @@ namespace API.Data
             context.SaveChanges();
         }
     }
-} 
+}
